@@ -2,6 +2,11 @@
 This repo contains a basic template for spring projects, feel free to use it.
 
 ## Reminders
+Para instalar o banco de dados MySQL que utilizaremos, siga os seguintes passos:
 
-That repo uses postgreSQL but you can change it on the application.properties file, and don't forget to set your spring.datasource.url on it.
-You can change the JDK version on the pom.xml file.
+Baixe e instale o software XAMPP.
+Inicie os módulos de Apache e MySQL.
+Clique em "Admin" para abir o banco de dados em seu navegador.
+Ao lado esquerdo da página do navegador, crie um novo banco de dados denominado "dataflix".
+Pronto!
+O projeto não compilará caso não suba o banco de dados MySQL.
