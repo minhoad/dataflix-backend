@@ -15,16 +15,6 @@ public class UsuarioServiceImpl implements UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     @Override
-    public Usuario validateLogin(String usuario, String senha) {
-
-        var entity = usuarioRepository.validateLogin(usuario, senha);
-        if(entity == null) {
-            throw new ServiceException("Usuário inválido");
-        }
-        else return entity;
-    }
-
-    @Override
     public void cadastroUser(Usuario user) {
         usuarioRepository.save(user);
     }
