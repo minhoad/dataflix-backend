@@ -1,7 +1,6 @@
 package dataflix.services.impl;
 
 import dataflix.entities.Plano;
-import dataflix.entities.Usuario;
 import dataflix.exceptions.ServiceException;
 import dataflix.repositories.PlanoRepository;
 import dataflix.services.PlanoService;
@@ -24,9 +23,9 @@ public class PlanoServiceImpl implements PlanoService {
         try  {
             List<Plano> planos = new ArrayList<>();
             planoRepository.findAll().forEach(planos::add);
-            return new ResponseEntity<List<Plano>>(planos, HttpStatus.OK);
+            return new ResponseEntity<>(planos, HttpStatus.OK);
         } catch (ServiceException e) {
-            return new ResponseEntity<>(null, e.getHttpStatus());
+            return new ResponseEntity<>(new ArrayList<>(), e.getHttpStatus());
         }
     }
 }
