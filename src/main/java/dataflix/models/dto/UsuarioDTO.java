@@ -1,4 +1,4 @@
-package basePackage.models.dto;
+package dataflix.models.dto;
 
 import lombok.Builder;
 import lombok.Data;

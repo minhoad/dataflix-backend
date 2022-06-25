@@ -1,4 +1,4 @@
-package basePackage.entities;
+package dataflix.entities;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,14 +8,18 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Table(name = "Genero")
+@Table(name = "HistoricoFilmes")
 @NoArgsConstructor
 @Entity
-public class Genero {
+public class HistoricoFilmes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private Long idUsuario;
+
+    private String nomeFilme;
+
+    private String tempoAssistido;
 }

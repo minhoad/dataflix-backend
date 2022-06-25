@@ -1,6 +1,6 @@
-package basePackage.services;
+package dataflix.services;
 
-import basePackage.entities.Usuario;
+import dataflix.entities.Usuario;
 import org.springframework.http.ResponseEntity;
 
 public interface LoginService {

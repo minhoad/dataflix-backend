@@ -1,6 +1,6 @@
-package basePackage.repositories;
+package dataflix.repositories;
 
-import basePackage.entities.Usuario;
+import dataflix.entities.Usuario;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

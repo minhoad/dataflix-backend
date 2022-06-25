@@ -1,10 +1,8 @@
-package basePackage.services.impl;
+package dataflix.services.impl;
 
-import basePackage.entities.Usuario;
-import basePackage.exceptions.ServiceException;
-import basePackage.models.dto.UsuarioDTO;
-import basePackage.repositories.UsuarioRepository;
-import basePackage.services.UsuarioService;
+import dataflix.entities.Usuario;
+import dataflix.repositories.UsuarioRepository;
+import dataflix.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

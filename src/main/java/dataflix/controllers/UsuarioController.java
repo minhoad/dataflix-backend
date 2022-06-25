@@ -1,8 +1,8 @@
-package basePackage.controllers;
+package dataflix.controllers;
 
-import basePackage.entities.Usuario;
-import basePackage.exceptions.ServiceException;
-import basePackage.services.UsuarioService;
+import dataflix.entities.Usuario;
+import dataflix.exceptions.ServiceException;
+import dataflix.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

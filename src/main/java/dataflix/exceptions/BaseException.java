@@ -1,4 +1,4 @@
-package basePackage.exceptions;
+package dataflix.exceptions;
 
 import lombok.Getter;
 import lombok.Setter;

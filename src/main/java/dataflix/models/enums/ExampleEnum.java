@@ -1,4 +1,4 @@
-package basePackage.models.enums;
+package dataflix.models.enums;
 
 public enum ExampleEnum {
 
