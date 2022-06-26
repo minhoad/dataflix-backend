@@ -27,7 +27,7 @@ public class Filme {
 
     private String descricao;
 
-    private String tipoPlanoId;
+    private Long tipoPlanoId;
 
     private String classificacao;
 }

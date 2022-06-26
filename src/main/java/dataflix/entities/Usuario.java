@@ -25,6 +25,6 @@ public class Usuario {
 
     private boolean planoIsAtivo;
 
-    private String tipoPlanoId;
+    private Long tipoPlanoId;
 
 }
