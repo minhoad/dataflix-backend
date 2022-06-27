@@ -1,5 +1,6 @@
 package basePackage.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,9 @@ public class FilmeServiceImpl implements FilmeService {
 
     @Override
     public List<Filme> getAllFilmes() {
-        return filmeRepository.findAll();
+        List<Filme> filmes = new ArrayList<>();
+        filmeRepository.findAll().forEach(filmes::add);
+        return filmes;
     }
 
     @Override

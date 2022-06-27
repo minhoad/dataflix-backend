@@ -10,7 +10,7 @@ import basePackage.entities.Filme;
 
 public interface FilmeRepository extends CrudRepository<Filme, Long> {
     
-    @Query("SELECT f FROM Filme f WHERE f.genero = :genero")
+    @Query("SELECT f FROM Filme f WHERE f.nomeGenero = :genero")
     List<Filme> getFilmesByGenero(@Param("genero") String genero);
 
 }
