@@ -8,18 +8,18 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Table(name = "HistoricoFilme")
+@Table(name = "Historico_Filme")
 @NoArgsConstructor
 @Entity
 public class HistoricoFilme {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     private Long idUsuario;
 
-    private String nomeFilme;
+    private Long idFilme;
 
     private String tempoAssistido;
 }

@@ -21,7 +21,7 @@ public class Filme {
 
     private String duracao;
 
-    private String nomeGenero;
+    private Long idGenero;
 
     private String idImagem;
 

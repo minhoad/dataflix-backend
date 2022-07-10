@@ -8,6 +8,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface FilmeRepository extends CrudRepository<Filme, Long> {
-    @Query("SELECT f FROM Filme f WHERE f.nomeGenero = :genero")
-    List<Filme> getFilmesByGenero(@Param("genero") String genero);
+    @Query("FROM Filme WHERE nomeGenero = :nomeGenero")
+    List<Filme> getFilmesByGenero(@Param("nomeGenero") String nomeGenero);
 }

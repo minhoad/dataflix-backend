@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/historico")
 public class HistoricoFilmeController {
@@ -17,7 +19,7 @@ public class HistoricoFilmeController {
     private HistoricoFilmeService historicoFilmeService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<HistoricoFilme> getHistoricoByUserId(@PathVariable("id") String userId) {
+    public ResponseEntity<List<HistoricoFilme>> getHistoricoByUserId(@PathVariable("id") String userId) {
         return historicoFilmeService.getHistoricoByUserId(userId);
     }
 

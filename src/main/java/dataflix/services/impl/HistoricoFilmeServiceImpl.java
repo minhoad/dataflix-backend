@@ -9,6 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class HistoricoFilmeServiceImpl implements HistoricoFilmeService {
 
@@ -16,12 +19,12 @@ public class HistoricoFilmeServiceImpl implements HistoricoFilmeService {
     private HistoricoFilmeRepository historicoFilmeRepository;
 
     @Override
-    public ResponseEntity<HistoricoFilme> getHistoricoByUserId(String userId) {
+    public ResponseEntity<List<HistoricoFilme>> getHistoricoByUserId(String userId) {
         try  {
             var entity = historicoFilmeRepository.getHistoricoByUserId(Long.parseLong(userId));
             return new ResponseEntity<>(entity, HttpStatus.OK);
         } catch (ServiceException e) {
-            return new ResponseEntity<>(new HistoricoFilme(), e.getHttpStatus());
+            return new ResponseEntity<>(new ArrayList<>(), e.getHttpStatus());
         }
 
     }
