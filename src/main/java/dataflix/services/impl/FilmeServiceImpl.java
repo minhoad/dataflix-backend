@@ -26,5 +26,10 @@ public class FilmeServiceImpl implements FilmeService {
     public List<Filme> getAllFilmesByGenero(String genero) {
         return filmeRepository.getFilmesByGenero(genero);
     }
-    
+
+    @Override
+    public Filme getFilmeById(String idFilme) {
+        return filmeRepository.findById(Long.parseLong(idFilme)).orElseThrow();
+    }
+
 }

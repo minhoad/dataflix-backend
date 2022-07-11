@@ -8,5 +8,5 @@ public interface FilmeService {
 
     List<Filme> getAllFilmes();
     List<Filme> getAllFilmesByGenero(String genero);
-
+    Filme getFilmeById(String idFilme);
 }

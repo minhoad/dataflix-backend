@@ -22,8 +22,13 @@ public class FilmesController {
         return filmeService.getAllFilmes();
     }
 
-    @GetMapping("/{genero}")
+    @GetMapping("/genero/{genero}")
     public List<Filme> getAllFilmesByGenero(@PathVariable("genero") String genero) {
         return filmeService.getAllFilmesByGenero(genero);
+    }
+
+    @GetMapping("/{id}")
+    public Filme getFilmeById(@PathVariable("id") String idFilme) {
+        return filmeService.getFilmeById(idFilme);
     }
 }
