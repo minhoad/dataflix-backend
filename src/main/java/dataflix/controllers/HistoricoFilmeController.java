@@ -21,8 +21,8 @@ public class HistoricoFilmeController {
         return historicoFilmeService.getHistoricoByUserId(userId);
     }
 
-    @PostMapping("/{usuarioId}/{filmeId}")
-    public ResponseEntity<String> insereHistorico(@PathVariable("usuarioId") String usuarioId, @PathVariable("filmeId") String filmeId) {
-        return historicoFilmeService.insereHistorico(usuarioId, filmeId);
+    @PostMapping("/{usuarioId}/{filmeId}/{histId}")
+    public ResponseEntity<String> insereHistorico(@PathVariable("usuarioId") String usuarioId, @PathVariable("filmeId") String filmeId, @PathVariable("histId") String histId) {
+        return historicoFilmeService.insereHistorico(usuarioId, filmeId, histId);
     }
 }

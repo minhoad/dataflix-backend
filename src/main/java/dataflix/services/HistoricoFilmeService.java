@@ -9,6 +9,6 @@ public interface HistoricoFilmeService {
 
     ResponseEntity<List<RetornoHistoricoDTO>> getHistoricoByUserId(String userId);
 
-    ResponseEntity<String> insereHistorico(String usuarioId, String filmeId);
+    ResponseEntity<String> insereHistorico(String usuarioId, String filmeId, String histId);
 
 }

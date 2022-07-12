@@ -47,11 +47,14 @@ public class HistoricoFilmeServiceImpl implements HistoricoFilmeService {
     }
 
     @Override
-    public ResponseEntity<String> insereHistorico(String usuarioId, String filmeId) {
+    public ResponseEntity<String> insereHistorico(String usuarioId, String filmeId, String histId) {
         try  {
             var entity = new HistoricoFilme();
             entity.setIdFilme(Long.parseLong(filmeId));
             entity.setIdUsuario(Long.parseLong(usuarioId));
+            if (histId!="0") {
+                entity.setId(Long.parseLong(histId));
+            }
             historicoFilmeRepository.save(entity);
             return new ResponseEntity<>("Histórico cadastrado com sucesso", HttpStatus.OK);
         } catch (ServiceException e) {
